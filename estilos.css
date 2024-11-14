@@ -6,16 +6,16 @@
 }
 
 body {
-    background-color: antiquewhite; /* Fondo suave */
-    font-family: 'Poppins', sans-serif; /* Tipografía moderna y legible */
-    color: #333; /* Color de texto general */
+    background-color: antiquewhite;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
 }
 
 /* HEADER */
 nav {
     width: 100%;
     min-height: 75px;
-    background-color: rgb(0, 0, 90); /* Azul oscuro */
+    background-color: rgb(0, 0, 90);
     color: #fff;
     display: flex;
     flex-flow: row wrap;
@@ -24,7 +24,7 @@ nav {
     padding: 0px 50px;
     top: 0;
     z-index: 1;
-    font-family: 'Poppins', sans-serif; /* Aseguramos la tipografía */
+    font-family: 'Poppins', sans-serif;
 }
 
 .logo {
@@ -33,7 +33,7 @@ nav {
     font-weight: bold;
     flex-direction: row;
     flex-wrap: wrap;
-    font-family: 'Poppins', sans-serif; /* Aseguramos la tipografía */
+    font-family: 'Poppins', sans-serif;
 }
 
 .menu {
@@ -42,7 +42,7 @@ nav {
     justify-content: right;
     flex-direction: row;
     flex-wrap: wrap;
-    font-family: 'Poppins', sans-serif; /* Aseguramos la tipografía */
+    font-family: 'Poppins', sans-serif;
 }
 
 .menu ul {
@@ -58,11 +58,11 @@ nav {
     color: #FFFF;
     text-decoration: none;
     transition: 0.3s ease;
-    font-family: 'Poppins', sans-serif; /* Aseguramos la tipografía */
+    font-family: 'Poppins', sans-serif;
 }
 
 .menu ul li a:hover {
-    color: #ccc; /* Hover más suave */
+    color: #ccc;
 }
 
 .search {
@@ -80,11 +80,11 @@ nav {
     border-radius: 5px;
     margin-right: 10px;
     font-size: 16px;
-    font-family: 'Poppins', sans-serif; /* Aseguramos la tipografía */
+    font-family: 'Poppins', sans-serif;
 }
 
 .search input:hover {
-    border: 1px solid #72a0d4; /* Azul suave al enfocar */
+    border: 1px solid #72a0d4;
 }
 
 .search button {
@@ -95,11 +95,11 @@ nav {
     color: #333;
     font-size: 19px;
     cursor: pointer;
-    font-family: 'Poppins', sans-serif; /* Aseguramos la tipografía */
+    font-family: 'Poppins', sans-serif;
 }
 
 .search button:hover {
-    background-color: #ccc; /* Cambio suave en el hover */
+    background-color: #ccc;
 }
 
 @media (min-width: 300px) {
@@ -114,69 +114,69 @@ nav {
 /* MAIN */
 .flex-container {
     min-height: 100vh;
-    border: 1px solid transparent; /* Bordes suaves */
-    background-color: #e8e8e8; /* Color más suave que el gris anterior */
+    border: 1px solid transparent;
+    background-color: #e8e8e8;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Espaciado entre las cards */
+    gap: 20px;
 }
 
 .caja {
     border: 1px solid rgb(70, 69, 69);
-    background-color: #f9f9f9; /* Fondo más suave */
+    background-color: #f9f9f9;
     color: black;
-    font-family: 'Poppins', sans-serif; /* Aseguramos la tipografía */
+    font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    width: 22%; /* Ajustamos a 22% para dar espacio entre las cards */
+    width: 22%;
     margin: 10px;
-    border-radius: 10px; /* Bordes redondeados */
+    border-radius: 10px;
     filter: drop-shadow(5px -4px 5px #000);
     transition: 300ms ease-in-out;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    overflow: hidden; /* Evitar desbordamientos */
-    word-wrap: break-word; /* Evita que el texto se desborde */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
 .caja a {
     text-decoration: none;
     color: black;
-    font-family: 'Poppins', sans-serif; /* Aseguramos la tipografía */
+    font-family: 'Poppins', sans-serif;
 }
 
 .caja a h3 {
     text-decoration: none;
-    font-size: 1.5rem; /* Cambiar tamaño para responsividad */
+    font-size: 1.5rem;
     font-weight: 500;
-    color: rgb(0, 0, 90); /* Azul claro para el título */
+    color: rgb(0, 0, 90);
     margin-bottom: 10px;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis; /* Elipsis si el texto es muy largo */
+    text-overflow: ellipsis;
 }
 
 .caja a p {
     font-size: 1rem;
-    color: #333; /* Texto gris para el contenido */
+    color: #333;
     margin-bottom: 15px;
 }
 
 .caja a:hover {
-    color: rgb(0, 0, 90); /* Azul claro al pasar el cursor */
+    color: rgb(0, 0, 90);
 }
 
 img {
     width: 100%;
-    height: auto; /* Asegura que las imágenes no se estiren */
+    height: auto;
     display: block;
 }
 
 .caja:hover {
-    transform: translateY(-8px); /* Suaviza el hover para un mejor efecto */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+    transform: translateY(-8px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* FOOTER */
@@ -186,9 +186,9 @@ img {
 }
 
 .footer {
-    background-color: rgb(0, 0, 90); /* Azul oscuro */
+    background-color: rgb(0, 0, 90);
     padding: 80px 0;
-    font-family: 'Poppins', sans-serif; /* Aseguramos la tipografía */
+    font-family: 'Poppins', sans-serif;
 }
 
 .footer_row {
@@ -206,10 +206,10 @@ img {
     color: #FFFFFF;
     margin-bottom: 25px;
     font-weight: 500;
-    border-bottom: 2px solid #00c3ff; /* Azul complementario */
+    border-bottom: 2px solid #00c3ff;
     padding-bottom: 10px;
     display: inline-block;
-    font-family: 'Poppins', sans-serif; /* Aseguramos la tipografía */
+    font-family: 'Poppins', sans-serif;
 }
 
 .footer_links ul li a {
@@ -219,7 +219,7 @@ img {
     display: block;
     margin-bottom: 15px;
     transition: 0.3s ease;
-    font-family: 'Poppins', sans-serif; /* Aseguramos la tipografía */
+    font-family: 'Poppins', sans-serif;
 }
 
 .footer_links ul li a:hover {
@@ -230,16 +230,16 @@ img {
 @media screen and (max-width: 768px) {
     .menu {
         width: 100%;
-        justify-content: center; /* Centrar el menú en pantallas pequeñas */
+        justify-content: center;
     }
 
     .menu ul {
-        flex-direction: column; /* Cambiar a columna para pantallas pequeñas */
+        flex-direction: column;
         align-items: center;
     }
 
     .caja {
-        width: 45%; /* Aumentar el tamaño de las cajas en pantallas pequeñas */
+        width: 45%;
     }
 
     .footer_links {
@@ -252,9 +252,7 @@ img {
     }
 }
 
-/* Mejoras de Interacción */
 .caja:hover {
-    transform: translateY(-8px); /* Suaviza el hover para un mejor efecto */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Mejora la sombra al hacer hover */
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
-
