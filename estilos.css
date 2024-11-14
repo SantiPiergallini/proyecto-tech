@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background-color: antiquewhite; /* Fondo suave */
+    font-family: 'Poppins', sans-serif; /* Tipografía moderna y legible */
+    color: #333; /* Color de texto general */
+}
+
+/* HEADER */
+nav {
+    width: 100%;
+    min-height: 75px;
+    background-color: rgb(0, 0, 90); /* Azul oscuro */
+    color: #fff;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    top: 0;
+    z-index: 1;
+    font-family: 'Poppins', sans-serif; /* Aseguramos la tipografía */
+}
+
+.logo {
+    display: flex;
+    font-size: 32px;
+    font-weight: bold;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif; /* Aseguramos la tipografía */
+}
+
+.menu {
+    width: 65%;
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif; /* Aseguramos la tipografía */
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu ul li {
+    margin-left: 20px;
+}
+
+.menu ul li a {
+    font-size: 19px;
+    color: #FFFF;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-family: 'Poppins', sans-serif; /* Aseguramos la tipografía */
+}
+
+.menu ul li a:hover {
+    color: #ccc; /* Hover más suave */
+}
+
+.search {
+    margin-right: 0;
+}
+
+.search form {
+    margin: 0;
+}
+
+.search input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif; /* Aseguramos la tipografía */
+}
+
+.search input:hover {
+    border: 1px solid #72a0d4; /* Azul suave al enfocar */
+}
+
+.search button {
+    padding: 10px;
+    background-color: #ffff;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-size: 19px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif; /* Aseguramos la tipografía */
+}
+
+.search button:hover {
+    background-color: #ccc; /* Cambio suave en el hover */
+}
+
+@media (min-width: 300px) {
+    header {
+        flex-direction: column;
+    }
+    nav {
+        padding: 10px 0px;
+    }
+}
+
+/* MAIN */
+.flex-container {
+    min-height: 100vh;
+    border: 1px solid transparent; /* Bordes suaves */
+    background-color: #e8e8e8; /* Color más suave que el gris anterior */
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espaciado entre las cards */
+}
+
+.caja {
+    border: 1px solid rgb(70, 69, 69);
+    background-color: #f9f9f9; /* Fondo más suave */
+    color: black;
+    font-family: 'Poppins', sans-serif; /* Aseguramos la tipografía */
+    font-weight: bold;
+    width: 22%; /* Ajustamos a 22% para dar espacio entre las cards */
+    margin: 10px;
+    border-radius: 10px; /* Bordes redondeados */
+    filter: drop-shadow(5px -4px 5px #000);
+    transition: 300ms ease-in-out;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    overflow: hidden; /* Evitar desbordamientos */
+    word-wrap: break-word; /* Evita que el texto se desborde */
+}
+
+.caja a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Poppins', sans-serif; /* Aseguramos la tipografía */
+}
+
+.caja a h3 {
+    text-decoration: none;
+    font-size: 1.5rem; /* Cambiar tamaño para responsividad */
+    font-weight: 500;
+    color: rgb(0, 0, 90); /* Azul claro para el título */
+    margin-bottom: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; /* Elipsis si el texto es muy largo */
+}
+
+.caja a p {
+    font-size: 1rem;
+    color: #333; /* Texto gris para el contenido */
+    margin-bottom: 15px;
+}
+
+.caja a:hover {
+    color: rgb(0, 0, 90); /* Azul claro al pasar el cursor */
+}
+
+img {
+    width: 100%;
+    height: auto; /* Asegura que las imágenes no se estiren */
+    display: block;
+}
+
+.caja:hover {
+    transform: translateY(-8px); /* Suaviza el hover para un mejor efecto */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+}
+
+/* FOOTER */
+.contenedor_footer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: rgb(0, 0, 90); /* Azul oscuro */
+    padding: 80px 0;
+    font-family: 'Poppins', sans-serif; /* Aseguramos la tipografía */
+}
+
+.footer_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer_links {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer_links h4 {
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid #00c3ff; /* Azul complementario */
+    padding-bottom: 10px;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif; /* Aseguramos la tipografía */
+}
+
+.footer_links ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #BBBBBB;
+    display: block;
+    margin-bottom: 15px;
+    transition: 0.3s ease;
+    font-family: 'Poppins', sans-serif; /* Aseguramos la tipografía */
+}
+
+.footer_links ul li a:hover {
+    color: #FFFFFF;
+    padding-left: 6px;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        width: 100%;
+        justify-content: center; /* Centrar el menú en pantallas pequeñas */
+    }
+
+    .menu ul {
+        flex-direction: column; /* Cambiar a columna para pantallas pequeñas */
+        align-items: center;
+    }
+
+    .caja {
+        width: 45%; /* Aumentar el tamaño de las cajas en pantallas pequeñas */
+    }
+
+    .footer_links {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .footer_row {
+        flex-direction: column;
+    }
+}
+
+/* Mejoras de Interacción */
+.caja:hover {
+    transform: translateY(-8px); /* Suaviza el hover para un mejor efecto */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Mejora la sombra al hacer hover */
+}
+

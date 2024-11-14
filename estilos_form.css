@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Mejorar tipografía */
+    background-color: rgb(0, 0, 90); /* Mantener fondo oscuro del header y footer */
+    color: #fff; /* Color de texto por defecto */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(0, 0, 90, 0.8), rgba(0, 0, 90, 0.5)); /* Degradado de azul oscuro a azul más claro */
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la ventana */
+    padding: 20px; /* Agregar algo de espaciado */
+}
+
+/* Resto de las reglas para .form_contenedor y el formulario */
+.form_contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Suave sombra para dar profundidad */
+}
+/* Estilo de cada caja dentro del formulario */
+.form_box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: black;
+}
+
+.form_box > h1 {
+    text-align: left;
+    font-size: 2rem; /* Mayor tamaño de fuente */
+    color: rgb(0, 0, 90); /* Azul complementario */
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.data > p {
+    font-size: 1.1rem;
+    color: rgb(0, 0, 90);
+}
+
+.data > p > i {
+    color: rgb(0, 0, 90);
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.input_box {
+    position: relative;
+}
+
+.input_box > input,
+.input_box > textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 2px solid #ddd; /* Borde suave */
+    outline: none;
+    transition: 0.3s ease-in-out;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.input_box > input:focus, 
+.input_box > textarea:focus {
+    border-color: rgb(0, 0, 90); /* Azul oscuro al enfocar */
+    background-color: #fff; /* Fondo blanco al enfocar */
+}
+
+.input_box > input::placeholder,
+.input_box > textarea::placeholder {
+    color: #a3a3a3;
+}
+
+.input_box > i {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: rgb(0, 0, 90);
+}
+
+form > button {
+    background-color: rgb(0, 0, 90);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+form > button:hover {
+    background-color: rgb(0, 0, 60); /* Azul más oscuro al hacer hover */
+    transform: translateY(-3px); /* Efecto de movimiento al hacer hover */
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+/* Media Queries para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .form_contenedor {
+        grid-template-columns: 1fr; /* Columnas de 1 cuando es más pequeño */
+        width: 90%;
+    }
+
+    .form_box > h1 {
+        font-size: 1.8rem;
+    }
+
+    .data > p {
+        font-size: 1rem;
+    }
+
+    form > button {
+        padding: 10px 18px;
+        font-size: 1.1rem;
+    }
+}

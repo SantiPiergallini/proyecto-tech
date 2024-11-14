@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos_form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Contacto</title>
+
+
+</head>
+<body>
+    <header> 
+        <nav>
+            
+                <div class="logo">FLEX</div>
+            <div  class="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href=" ">Productos</a></li>
+                    <li><a href=" ">Servivicos</a></li>
+                    <li><a href=" ">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <form>
+                   <input type="text" placeholder="Buscar...">
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+            
+        </nav>
+    </header>
+
+
+
+    <main>
+        <div class="form_contenedor">
+        <div class="form_box">
+            <h1>Contactate con Nosotros</h1>
+            <div class="data">
+                <p><i class="fa-solid fa-phone"></i>+55 5555-5555</p>
+                <p><i class="fa-solid fa-envelope"></i>Contacto@Flex.com.ar</p>
+                 <p><i class="fa solid fa fa-location-dot"></i>Calle Falsa 123</p>
+            </div>
+        </div>
+        <form  action="https://formspree.io/f/xrbgkaly" method="POST">
+            <div class="input_box">
+                <input type="text" required
+                placeholder="Nombre y Apellido">
+                <i class="fa-solid fa-user"></i>
+            </div>
+        
+            <div class="input_box">
+                <input type="email" name="Email" required   
+                placeholder="Correo electronico">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+        
+            <div class="input_box">
+               <input type="affair" name="Asunto" required
+                placeholder="Asunto">
+                <i class="fa-solid fa-pen-to-square"></i>
+            </div>    
+            <div class="input_box">
+                <textarea name="message" cols="30" rows="10"
+                placeholder="Escribe tu mensaje..."></textarea>
+             </div>  
+            <button type="submit">Enviar</button>
+         
+        </form>
+        </div>
+    </main>
+
+
+    
+    <footer class="footer">
+        
+        <div class="contenedor_footer">
+            
+            <div class="footer_row">
+                <div class="footer_links">
+
+                    <h4>Compañia</h4>
+                    <ul>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Nuestors servivicos</a></li>
+                        <li><a href="#">Politica de privacidad</a></li>
+                        <li><a href="#">Afiliate</a></li>
+                    </ul>
+                </div>
+                <div class="footer_links">
+
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="#">Preguntas</a></li>
+                        <li><a href="#">Compras</a></li>
+                        <li><a href="comentarios.html">Comentarios</a></li>
+                        <li><a href="#">Pago</a></li>
+                    </ul>
+                </div>
+                <div class="footer_links">
+
+                    <h4>Sigenos</h4>
+                    <div class="social_link_footer">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+    </footer>
+</body>
+</html>
