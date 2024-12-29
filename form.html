@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="estilos_form.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
@@ -14,24 +13,46 @@
 <body>
     <header> 
         <nav>
-            
-                <div class="logo">FLEX</div>
-            <div  class="menu">
+            <div class="logo">FLEX</div>
+
+            <!-- Menú lateral desplegable -->
+            <div class="menu">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href=" ">Productos</a></li>
-                    <li><a href=" ">Servivicos</a></li>
-                    <li><a href=" ">Contacto</a></li>
+                    <li><a href=" ">Servicios</a></li>
+                    <li><a href="form.html">Contacto</a></li>
+                    
                 </ul>
             </div>
+            <a href="#" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span> <!-- Este es el contador de artículos en el carrito -->
+            </a>
+            <!-- Botón de hamburguesa para dispositivos móviles -->
+            <div class="hamburger-menu" id="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
             <div class="search">
                 <form>
-                   <input type="text" placeholder="Buscar...">
+                    <input type="text" placeholder="Buscar...">
                     <button type="submit">Buscar</button>
                 </form>
             </div>
-            
         </nav>
+
+        <!-- Menú lateral desplegable en móviles -->
+        <div class="sidebar" id="sidebar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href=" ">Productos</a></li>
+                <li><a href=" ">Servicios</a></li>
+                <li><a href="form.html">Contacto</a></li>
+                <li><a href="#" id="carrito-link">Carrito</a></li>
+            </ul>
+        </div>
+
     </header>
 
 
@@ -116,5 +137,17 @@
         </div>
         
     </footer>
+     <!-- Carrito lateral -->
+<div id="cart">
+    <h2>Carrito de compras</h2>
+    <ul>
+        <!-- Los productos del carrito se añadirán aquí dinámicamente -->
+    </ul>
+    <!-- Botón para cancelar la compra (vaciar el carrito) -->
+    <button class="cancel-purchase">Cancelar compra</button>
+</div>
+
+
+    <script src="script.js"></script>
 </body>
 </html>

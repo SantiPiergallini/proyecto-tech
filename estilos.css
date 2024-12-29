@@ -1,3 +1,4 @@
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -18,31 +19,22 @@ nav {
     background-color: rgb(0, 0, 90);
     color: #fff;
     display: flex;
-    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 50px;
-    top: 0;
-    z-index: 1;
-    font-family: 'Poppins', sans-serif;
+    padding: 0 50px;
+    position: relative;
 }
 
+/* Título */
 .logo {
-    display: flex;
     font-size: 32px;
     font-weight: bold;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-family: 'Poppins', sans-serif;
 }
 
+/* Menú */
 .menu {
-    width: 65%;
     display: flex;
-    justify-content: right;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-family: 'Poppins', sans-serif;
+    justify-content: flex-end;
 }
 
 .menu ul {
@@ -55,22 +47,20 @@ nav {
 
 .menu ul li a {
     font-size: 19px;
-    color: #FFFF;
+    color: #fff;
     text-decoration: none;
     transition: 0.3s ease;
-    font-family: 'Poppins', sans-serif;
 }
 
 .menu ul li a:hover {
     color: #ccc;
 }
 
-.search {
-    margin-right: 0;
-}
-
+/* Buscador */
 .search form {
     margin: 0;
+    display: flex;
+    align-items: center;
 }
 
 .search input {
@@ -79,8 +69,6 @@ nav {
     outline: none;
     border-radius: 5px;
     margin-right: 10px;
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
 }
 
 .search input:hover {
@@ -89,32 +77,88 @@ nav {
 
 .search button {
     padding: 10px;
-    background-color: #ffff;
+    background-color: #fff;
     border: none;
     border-radius: 5px;
     color: #333;
     font-size: 19px;
     cursor: pointer;
-    font-family: 'Poppins', sans-serif;
 }
 
 .search button:hover {
     background-color: #ccc;
 }
 
-@media (min-width: 300px) {
-    header {
-        flex-direction: column;
-    }
+/* Estilos para dispositivos pequeños */
+@media (max-width: 768px) {
+    /* Distribución de los elementos del header */
     nav {
-        padding: 10px 0px;
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        padding: 10px 20px;
+    }
+
+    .logo {
+        font-size: 28px; /* Ajusta el tamaño del logo para que sea más proporcional */
+        margin-bottom: 10px; /* Espaciado debajo del logo */
+    }
+
+    .menu {
+        display: none; /* Esconde el menú en pantallas pequeñas */
+    }
+
+    .hamburger-menu {
+        display: block; /* Muestra el botón de hamburguesa en pantallas pequeñas */
+        font-size: 30px;
+        cursor: pointer;
+        color: #fff;
+        margin-top: 10px; /* Añade algo de espacio arriba */
+    }
+
+    .search form {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin-top: 10px; /* Espacio entre el logo y el buscador */
+    }
+
+    .search input {
+        width: 80%; /* Ajusta el tamaño del input de búsqueda */
+        margin-right: 10px;
+    }
+
+    .search button {
+        width: 15%; /* Ajusta el tamaño del botón de búsqueda */
+        padding: 10px;
     }
 }
+
+/* Para pantallas grandes (monitores, tablets, etc.) */
+@media (min-width: 769px) {
+    .hamburger-menu {
+        display: none; /* Oculta el botón de hamburguesa en pantallas grandes */
+    }
+
+    .menu {
+        display: flex; /* Muestra el menú de manera normal en pantallas grandes */
+    }
+
+    .search form {
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .search input {
+        width: 200px;
+    }
+
+    .search button {
+        padding: 10px;
+    }
+}
+
 
 /* MAIN */
 .flex-container {
     min-height: 100vh;
-    border: 1px solid transparent;
     background-color: #e8e8e8;
     padding: 20px;
     display: flex;
@@ -129,7 +173,7 @@ nav {
     color: black;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    width: 22%;
+    width: 22%; /* Esto hace que las cajas sean 4 por fila en pantallas grandes */
     margin: 10px;
     border-radius: 10px;
     filter: drop-shadow(5px -4px 5px #000);
@@ -144,11 +188,9 @@ nav {
 .caja a {
     text-decoration: none;
     color: black;
-    font-family: 'Poppins', sans-serif;
 }
 
 .caja a h3 {
-    text-decoration: none;
     font-size: 1.5rem;
     font-weight: 500;
     color: rgb(0, 0, 90);
@@ -164,8 +206,9 @@ nav {
     margin-bottom: 15px;
 }
 
-.caja a:hover {
-    color: rgb(0, 0, 90);
+.caja:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 img {
@@ -174,17 +217,35 @@ img {
     display: block;
 }
 
-.caja:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+/* Estilos para dispositivos móviles (Pantallas pequeñas) */
+@media (max-width: 768px) {
+    .flex-container {
+        justify-content: flex-start; /* Alinea las cajas al inicio en lugar de al centro */
+    }
+
+    .caja {
+        width: 100%; /* Hace que cada caja ocupe el 100% del ancho disponible */
+        margin: 10px 0; /* Espacio entre las cajas */
+    }
+
+    .caja a h3 {
+        font-size: 1.2rem; /* Ajusta el tamaño del título */
+    }
+
+    .caja a p {
+        font-size: 0.9rem; /* Ajusta el tamaño de la descripción */
+    }
+
+    .search input {
+        width: 75%; /* Ajusta el tamaño del input en móviles */
+    }
+
+    .search button {
+        width: 20%; /* Ajusta el tamaño del botón de búsqueda */
+    }
 }
 
 /* FOOTER */
-.contenedor_footer {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .footer {
     background-color: rgb(0, 0, 90);
     padding: 80px 0;
@@ -203,56 +264,595 @@ img {
 
 .footer_links h4 {
     font-size: 20px;
-    color: #FFFFFF;
+    color: #fff;
     margin-bottom: 25px;
     font-weight: 500;
     border-bottom: 2px solid #00c3ff;
     padding-bottom: 10px;
-    display: inline-block;
-    font-family: 'Poppins', sans-serif;
 }
 
 .footer_links ul li a {
     font-size: 18px;
     text-decoration: none;
-    color: #BBBBBB;
+    color: #bbbbbb;
     display: block;
     margin-bottom: 15px;
     transition: 0.3s ease;
-    font-family: 'Poppins', sans-serif;
 }
 
 .footer_links ul li a:hover {
-    color: #FFFFFF;
+    color: #fff;
     padding-left: 6px;
 }
 
-@media screen and (max-width: 768px) {
-    .menu {
-        width: 100%;
-        justify-content: center;
+/* Estilos para el botón de añadir al carrito */
+.add-to-cart {
+    padding: 10px 20px;
+    background-color: #00c3ff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #ff6600;
+}
+
+/* Menú lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgb(0, 0, 90);
+    color: #fff;
+    padding: 20px;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.sidebar ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #ccc;
+}
+
+.sidebar.active {
+    left: 0; /* Muestra la barra lateral cuando se agrega la clase 'active' */
+}
+
+/* Estilo para el carrito lateral */
+#cart {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgb(0, 0, 90);
+    color: white;
+    padding: 20px;
+    transition: 0.3s;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+#cart.active {
+    right: 0; /* Muestra el carrito cuando tiene la clase 'active' */
+}
+
+#cart h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#cart ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+#cart ul li {
+    margin-bottom: 15px;
+}
+
+#cart .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart .cart-item span {
+    font-size: 16px;
+}
+
+/* Botón para cerrar el carrito */
+#cart .close-cart,
+#cart .cancel-purchase {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#cart .close-cart:hover,
+#cart .cancel-purchase:hover {
+    background-color: #cc5200;
+}
+
+/* Estilo para el botón de cancelar compra */
+.cancel-purchase {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cancel-purchase:hover {
+    background-color: #d32f2f;
+}
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background-color: antiquewhite;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* HEADER */
+nav {
+    width: 100%;
+    min-height: 75px;
+    background-color: rgb(0, 0, 90);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    position: relative;
+}
+
+/* Título */
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Menú */
+.menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu ul li {
+    margin-left: 20px;
+}
+
+.menu ul li a {
+    font-size: 19px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #ccc;
+}
+
+/* Buscador */
+.search form {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search input:hover {
+    border: 1px solid #72a0d4;
+}
+
+.search button {
+    padding: 10px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: #ccc;
+}
+
+/* Estilos para dispositivos pequeños */
+@media (max-width: 768px) {
+    /* Distribución de los elementos del header */
+    nav {
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        padding: 10px 20px;
     }
 
-    .menu ul {
-        flex-direction: column;
+    .logo {
+        font-size: 28px; /* Ajusta el tamaño del logo para que sea más proporcional */
+        margin-bottom: 10px; /* Espaciado debajo del logo */
+    }
+
+    .menu {
+        display: none; /* Esconde el menú en pantallas pequeñas */
+    }
+
+    .hamburger-menu {
+        display: block; /* Muestra el botón de hamburguesa en pantallas pequeñas */
+        font-size: 30px;
+        cursor: pointer;
+        color: #fff;
+        margin-top: 10px; /* Añade algo de espacio arriba */
+    }
+
+    .search form {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin-top: 10px; /* Espacio entre el logo y el buscador */
+    }
+
+    .search input {
+        width: 80%; /* Ajusta el tamaño del input de búsqueda */
+        margin-right: 10px;
+    }
+
+    .search button {
+        width: 15%; /* Ajusta el tamaño del botón de búsqueda */
+        padding: 10px;
+    }
+}
+
+/* Para pantallas grandes (monitores, tablets, etc.) */
+@media (min-width: 769px) {
+    .hamburger-menu {
+        display: none; /* Oculta el botón de hamburguesa en pantallas grandes */
+    }
+
+    .menu {
+        display: flex; /* Muestra el menú de manera normal en pantallas grandes */
+    }
+
+    .search form {
+        margin: 0;
+        display: flex;
         align-items: center;
     }
 
-    .caja {
-        width: 45%;
+    .search input {
+        width: 200px;
     }
 
-    .footer_links {
-        width: 50%;
-        margin-bottom: 20px;
+    .search button {
+        padding: 10px;
     }
+}
 
-    .footer_row {
-        flex-direction: column;
-    }
+
+/* MAIN */
+.flex-container {
+    min-height: 100vh;
+    background-color: #e8e8e8;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.caja {
+    border: 1px solid rgb(70, 69, 69);
+    background-color: #f9f9f9;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    width: 22%; /* Esto hace que las cajas sean 4 por fila en pantallas grandes */
+    margin: 10px;
+    border-radius: 10px;
+    filter: drop-shadow(5px -4px 5px #000);
+    transition: 300ms ease-in-out;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.caja a {
+    text-decoration: none;
+    color: black;
+}
+
+.caja a h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgb(0, 0, 90);
+    margin-bottom: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.caja a p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
 }
 
 .caja:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Estilos para dispositivos móviles (Pantallas pequeñas) */
+@media (max-width: 768px) {
+    .flex-container {
+        justify-content: flex-start; /* Alinea las cajas al inicio en lugar de al centro */
+    }
+
+    .caja {
+        width: 100%; /* Hace que cada caja ocupe el 100% del ancho disponible */
+        margin: 10px 0; /* Espacio entre las cajas */
+    }
+
+    .caja a h3 {
+        font-size: 1.2rem; /* Ajusta el tamaño del título */
+    }
+
+    .caja a p {
+        font-size: 0.9rem; /* Ajusta el tamaño de la descripción */
+    }
+
+    .search input {
+        width: 75%; /* Ajusta el tamaño del input en móviles */
+    }
+
+    .search button {
+        width: 20%; /* Ajusta el tamaño del botón de búsqueda */
+    }
+}
+
+/* FOOTER */
+.footer {
+    background-color: rgb(0, 0, 90);
+    padding: 80px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer_links {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer_links h4 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid #00c3ff;
+    padding-bottom: 10px;
+}
+
+.footer_links ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #bbbbbb;
+    display: block;
+    margin-bottom: 15px;
+    transition: 0.3s ease;
+}
+
+.footer_links ul li a:hover {
+    color: #fff;
+    padding-left: 6px;
+}
+
+/* Estilos para el botón de añadir al carrito */
+.add-to-cart {
+    padding: 10px 20px;
+    background-color: #00c3ff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #ff6600;
+}
+
+/* Menú lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgb(0, 0, 90);
+    color: #fff;
+    padding: 20px;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.sidebar ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #ccc;
+}
+
+.sidebar.active {
+    left: 0; /* Muestra la barra lateral cuando se agrega la clase 'active' */
+}
+
+/* Estilo para el carrito lateral */
+#cart {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgb(0, 0, 90);
+    color: white;
+    padding: 20px;
+    transition: 0.3s;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+#cart.active {
+    right: 0; /* Muestra el carrito cuando tiene la clase 'active' */
+}
+
+#cart h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#cart ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+#cart ul li {
+    margin-bottom: 15px;
+}
+
+#cart .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart .cart-item span {
+    font-size: 16px;
+}
+
+/* Botón para cerrar el carrito */
+#cart .close-cart,
+#cart .cancel-purchase {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#cart .close-cart:hover,
+#cart .cancel-purchase:hover {
+    background-color: #cc5200;
+}
+
+/* Estilo para el botón de cancelar compra */
+.cancel-purchase {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cancel-purchase:hover {
+    background-color: #d32f2f;
+}
+.cart-icon {
+    display: inline-block;
+    color: #fff;
+    font-size: 22px;
+    margin-left: 20px;
+ 
+}
+
+.cart-total {
+    border-top: 1px solid #fff;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ccc;
+    display: flex;
+    justify-content: space-between;
 }
