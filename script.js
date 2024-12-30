@@ -116,8 +116,7 @@ document.addEventListener('DOMContentLoaded', updateCart);
 
 // (Opcional) Eliminar los productos del carrito cuando se cierra la pestaña o se recarga la página
 window.addEventListener('beforeunload', function() {
-    // Si deseas eliminar los productos al cerrar la página o recargarla, comenta esta línea.
-    //localStorage.removeItem('cart');
+    
 });
 // Función para calcular el total del precio del carrito
 function calculateTotal() {
